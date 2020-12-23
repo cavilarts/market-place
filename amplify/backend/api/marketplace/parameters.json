@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "marketplace",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authmarketplacecb57ed70",
+            "Outputs.UserPoolId"
+        ]
+    }
+}

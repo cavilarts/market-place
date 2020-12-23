@@ -1,0 +1,13 @@
+type Hero
+    @model
+    @auth(
+        rules: [
+            { allow: groups, groups: ["Admin"] }
+            { allow: private, operations: [read] }
+            { allow: public, operations: [read] }
+        ]
+    ) {
+    id: ID!
+    image: String!
+    active: Boolean!
+}
